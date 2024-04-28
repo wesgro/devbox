@@ -7,7 +7,7 @@
     // Update 'VARIANT' to pick a Node version: 16, 14, 12.
     // Append -bullseye or -buster to pin to an OS version.
     // Use -bullseye variants on local arm64/Apple Silicon.
-    "args": { "VARIANT": "16-buster" }
+    "args": { "VARIANT": "22-buster" }
   },
 
   // Configure tool-specific properties.
@@ -45,6 +45,6 @@
   // },
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "sudo corepack enable && yarn init -2 && yarn plugin import typescript && yarn add --dev typescript vite @vitejs/plugin-react react react-dom && yarn install && yarn dlx @yarnpkg/sdks vscode",
+  "postCreateCommand": "sudo corepack enable pnpm && pnpm create vite vite-react --template react-ts",
   "remoteUser": "node"
 }
